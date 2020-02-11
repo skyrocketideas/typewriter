@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", init);
 const typeText = document.querySelector(".typewritten").textContent;
 
 // remove text from class
-const noText = (document.querySelector(".typewritten").textContent = "");
+let noText = (document.querySelector(".typewritten").textContent = "");
 
 // set counter to 0
 let count = 0;
@@ -15,9 +15,9 @@ function init() {
   document.querySelector(".typewritten").textContent = typeText.substring(0, count);
   if (typeText.length > count) {
     count++;
-    setTimeout(init, 100);
+    setTimeout(init, 300);
   }
-  console.log(count);
 }
 
 console.log(typeText);
+console.log(noText);
